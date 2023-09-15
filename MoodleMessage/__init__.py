@@ -1,4 +1,4 @@
-from MoodleMessage.send import send
+from MoodleMessage.send import send_text
 
 
 class MoodleMessage:
@@ -10,4 +10,8 @@ class MoodleMessage:
         self.session_token = session_token
 
     def send_message(self, text, conversation_id):
+        send_text(text, conversation_id, self.hostname, self.session_token)
+
+    def send_image(self, image_url, conversation_id):
+        text = f'<img src="{image_url}"/>'
         send_text(text, conversation_id, self.hostname, self.session_token)
