@@ -7,7 +7,7 @@ def send_text(text, coversation_id, base_url, session_token) -> int:
     headers = {
         "authority": f"{base_url}",
         "method": "POST",
-        "path": "/lib/ajax/service.php?sesskey=DQqXmsUOkC&info=core_message_send_messages_to_conversation",
+        "path": f"/lib/ajax/service.php?sesskey={session_token}&info={info}",
         "scheme": "https",
         "Accept": "application/json, text/javascript, */*; q=0.01",
         "Accept-Encoding": "gzip, deflate, br",
