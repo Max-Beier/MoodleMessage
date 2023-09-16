@@ -5,7 +5,7 @@ def send_text(text, coversation_id, base_url, session_token) -> int:
     url = f'https://{base_url}/lib/ajax/service.php?sesskey={session_token}&info={info}'
 
     headers = {
-        "authority": "moodle.jobelmannschule.de",
+        "authority": f"{base_url}",
         "method": "POST",
         "path": "/lib/ajax/service.php?sesskey=DQqXmsUOkC&info=core_message_send_messages_to_conversation",
         "scheme": "https",
