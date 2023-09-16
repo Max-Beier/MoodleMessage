@@ -1,6 +1,6 @@
 import requests
 
-def send_text(text, coversation_id, base_url, session_token) -> int:
+def send_text(text, coversation_id, base_url, session, session_token) -> int:
     info = "core_message_send_messages_to_conversation"
     url = f'https://{base_url}/lib/ajax/service.php?sesskey={session_token}&info={info}'
 
@@ -14,7 +14,7 @@ def send_text(text, coversation_id, base_url, session_token) -> int:
         "Accept-Language": "de-DE,de;q=0.9,en-US;q=0.8,en;q=0.7",
         "Content-Length": "129",
         "Content-Type": "application/json",
-        "Cookie": "",
+        "Cookie": f"MoodleSession={session};",
         "Origin": f"https://{base_url}",
         "Referer": f"https://{base_url}/my/",
         "Sec-Ch-Ua": "\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"Google Chrome\";v=\"116\"",
