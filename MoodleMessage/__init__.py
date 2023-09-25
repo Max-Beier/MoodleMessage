@@ -1,7 +1,7 @@
 from MoodleMessage.send import send_text
 
 
-class Messanger:
+class Messenger:
     hostname = ""
     session = ""
     session_token = ""
