@@ -12,9 +12,9 @@ def main():
     session_token = "DwYPutoMM5"
     conversation_id = "12218"
 
-    messanger = Messenger(hostname=hostname, session=session, session_token=session_token, conversation_id=conversation_id)
+    messenger = Messenger(hostname=hostname, session=session, session_token=session_token, conversation_id=conversation_id)
 
-    messanger.send_text(text="Hello, this is foo!")
+    messenger.send_text(text="Hello, this is foo!")
 
 main()
 ```
